@@ -1,4 +1,6 @@
-# React + TypeScript + Vite
+# TIP CALCULATOR with React + TypeScript + Vite
+
+Created with Tailwind CSS, created a Custom Hook, improved performance by rendering certain components, used the useMemo component
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
