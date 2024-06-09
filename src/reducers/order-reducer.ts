@@ -42,20 +42,25 @@ export const orderReducer = (state: OrderState = initialState, action: OrderActi
 
         const updatedOrder = (state.order.filter( (orderItem) => orderItem.id !== action.payload.id))
         return {
-        ...state,
-        order: updatedOrder
+            ...state,
+            order: updatedOrder
         }
     }
 
     if (action.type === "place-Order") {
+
         return {
-        ...state
+            ...state,
+            order: initialState
         }
     }
 
     if (action.type === "add-Tip") {
+
+        const tip = action.payload.value
         return {
-        ...state
+            ...state,
+            tip
         }
     }
 }

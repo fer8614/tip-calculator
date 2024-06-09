@@ -21,10 +21,10 @@ export default function OrderContents( { order, dispatch } : OrderContentsProps)
                             >
                                 <div>
                                     <p className="text-lg">
-                                        {item.name} - { formatCurrency( item.price ) }
+                                        {item.name } - { formatCurrency( item.price ) }
                                     </p>
                                     <p className="font-black">Quantity: 
-                                        {item.quantity} - { formatCurrency( item.price * item.quantity ) }
+                                        { item.quantity } - { formatCurrency( item.price * item.quantity ) }
                                     </p>
                                 </div>
 
