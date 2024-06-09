@@ -18,9 +18,10 @@ export const initialState : OrderState = {
 
 export const orderReducer = (state: OrderState = initialState, action: OrderActions) => {
     
+
     if (action.type === "add-Item") {
         const itemExist = state.order.find( orderItem => orderItem.id === action.payload.item.id)
-        let updatedOrder : OrderItem[] = []
+        let updatedOrder : OrderItem[] = [];
         if (itemExist) {
             updatedOrder = state.order.map( orderItem => orderItem.id === action.payload.item.id ? 
                 { ...orderItem, quantity: orderItem.quantity + 1 } : 
@@ -38,8 +39,11 @@ export const orderReducer = (state: OrderState = initialState, action: OrderActi
     }
 
     if (action.type === "remove-Item") {
+
+        const updatedOrder = (state.order.filter( (orderItem) => orderItem.id !== action.payload.id))
         return {
-        ...state
+        ...state,
+        order: updatedOrder
         }
     }
 
