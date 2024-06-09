@@ -25,7 +25,7 @@ const tipOptions = [
 export default function TipPercentageForm( { dispatch, tip } : TipPercentageFormProps) {
   return (
     <div>
-        <h3 className="text-xl font-black">Tip:</h3>
+        <h3 className="text-xl font-black">Tip :</h3>
 
         <form>
             {tipOptions.map((tipOption) => (

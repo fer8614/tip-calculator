@@ -19,16 +19,16 @@ export default function OrderTotals( { order, tip, dispatch }: OrderTotalsProps 
   return (
     <>
         <div className="space-y-3">
-            <h2 className="font-black text-2xl">Totals and tips: </h2>
-            <p>Subtotal to pay:{' '}
+            <h2 className="font-black text-2xl">Totals and tips : </h2>
+            <p>Subtotal to pay : {' '}
                 <span className="font-bold">{ formatCurrency( subTotalAmount ) }</span>
             </p>
 
-            <p>Tip: {' '}
+            <p>Tip : {' '}
                 <span className="font-bold">{ formatCurrency( tipAmount ) }</span>
             </p>
 
-            <p>Total to pay: {' '} 
+            <p>Total to pay : {' '} 
                 <span className="font-bold">{ formatCurrency( totalAmount ) }</span>
             </p>
         </div>

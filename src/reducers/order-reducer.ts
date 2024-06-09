@@ -16,7 +16,7 @@ export const initialState : OrderState = {
     tip: 0
 }
 
-export const orderReducer = (state: OrderState = initialState, action: OrderActions) => {
+export const orderReducer = ( state: OrderState = initialState, action: OrderActions ) => {
     
 
     if (action.type === "add-Item") {
@@ -51,7 +51,8 @@ export const orderReducer = (state: OrderState = initialState, action: OrderActi
 
         return {
             ...state,
-            order: initialState
+            order: [],
+            tip: 0
         }
     }
 

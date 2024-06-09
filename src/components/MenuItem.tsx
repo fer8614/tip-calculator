@@ -15,7 +15,7 @@ export default function MenuItem( { item, dispatch } : MenuItemProps) {
     >
 
         <p>{item.name}</p>
-        <p className=" font-black">${item.price}</p>
+        <p className=" font-black">$ {item.price}</p>
     </button>
   )
 }
